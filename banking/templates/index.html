@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+<head>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="{% static 'css/main.css' %}">
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+	<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/fontawesome.min.css">
+	<title>Photronix</title>
+</head>
+<body>
+        <!---navBar-->
+	<section>
+		<header>
+			
+            <a href="#" class="logo"><img src="{% static 'images/log.png' %}" width="70px"></a>
+			<a class="toggle">MENU</a>
+			<ul>
+				
+				<li><a href="/" class="active">Home</a></li>
+				<li><a href="/transfer/?a=0">Transfer</a></li>
+				<li><a href="/trans/">Transaction</a></li>
+				<li><a href="#">About Us</a></li>
+				<li><a href="#">Contact</a></li>
+			</ul>
+		</header>
+
+		<!--title-->
+
+		<div class="head">
+			<h1><i class="material-icons">$</i>parking</h1>
+			<p>Trusted Bank</p>
+			<a href="https://www.thesparksfoundationsingapore.org/" class="btn-c">Visit us to know more</a>
+		</div>
+	</section>
+       
+    
+    <!--Image hover class-->
+	<div class="ig">
+		<div class="ig1">
+			<a href="/customer/">
+			<img src="{% static 'images/cus.png' %}">
+			<div class="layer1">
+				<h3>List of customer</h3>
+			</div>
+			</a>
+			<h2>Customer</h2>
+		</div>
+		
+		<div class="ig1">
+			<a href="/transfer/">
+			<img src="{% static 'images/tran.jpg' %}">
+			<div class="layer1">
+				<h3>Transfer Money from you account</h3>
+			</div>
+			</a>
+            <h2>Transfer Money</h2>
+		</div>
+	<!--	<div class="ig1">
+			<img src="./photo/delhi.jpg">
+			<div class="layer1">
+				<h3>Delhi</h3>
+			</div>
+		</div>
+		<div class="ig1">
+			<img src="./photo/kolkata.jpg">
+			<div class="layer1">
+				<h3>Kolkata</h3>
+			</div>
+		</div>
+		<div class="ig1">
+			<img src="./photo/bengaluru.jpg">
+			<div class="layer1">
+				<h3>Bengaluru</h3>
+			</div>
+		</div>
+		<div class="ig1">
+			<img src="./photo/hyderabad.jpg">
+			<div class="layer1">
+				<h3>Hyderabad</h3>
+			</div>
+		</div>  -->
+	</div>
+     
+     <!--about us -->
+	<div class="intro-head" name="about">
+        	<h1>About Us</h1>
+            <hr>
+        	<p>WE TAKE YOUR SECURITY
+             SERIOUSLY !
+          </p>
+        </div>
+
+	<div class="intro">
+		<div class="intro1">
+			<h3>Services</h3>
+			<p>Sparking offers different type of accounts to meet your financial goals and secure your future. </p>
+		</div>
+		<div class="entro2">
+			<h3>Accounts</h3>
+			<p>Choose from our wide range of deposit products that are specifically designed to keep your unique requirements in mind.</p>
+		</div>
+		<div class="entro3">
+			<h3>Offers %</h3>
+			<p>Gain access to many exciting offers & trending deals on various Sparking account cards.</p>
+		</div>
+	</div>
+
+	<!--Contact us -->
+  
+  <h1 class="chead">Contact Us</h1>
+	<div class="contact">
+		<div class="c2">
+		<form action="#" method="POST">
+			<table>
+				<tr><th>Name</th><td><input type="text" name="name"></td></tr>
+				<tr><th>Email</th><td><input type="email" name="email"></td></tr>
+				<tr><th>Description</th><td><textarea name="desc"></textarea></td></tr>
+				<tr><td></td><td><input type="submit" value="Submit" class="submit"></td></tr>
+			</table>
+		</form>
+		</div>
+	</div>
+
+    <!--footer-->
+<div class="container">
+  <div class="row">
+    <div class="col p4">
+     <h1 class="text-danger"><span>$</span>parking</h1><br>
+     
+       <a href="#">Privacy</a><br>
+       <a href="#">Disclaimer</a><br>
+       <a href="#">Terms & Conditions</a>
+    </div>
+    <div class="col p3">
+       <h4>Trusted Bank</h4>
+      <p>Disclaimer Multilingual Disclaimer Code of Commitment Group Code of Business Conduct and Ethics Customer Service Policies Use of Unparliamentary Language by Customers Privacy USA Patriot Act Certification Fair Practice Code for Lenders
+      </p>
+    </div>
+    <div class="col p">
+          <a href="#" class="a">Home</a><br>
+          <a href="#" class="a">About</a><br>
+          <a href="#" class="a">FAQ</a><br>
+          <a href="#" class="a">Contact</a>
+    </div>
+    
+  </div>
+    <div>
+    	<p class="copy">Sparking bank &copy; 2015</p>
+    </div>
+</div>
+
+
+
+
+	<script>
+		$(document).ready(function(){
+			$('.toggle').click(function(){
+				$('ul').toggleClass('active')
+			})
+		})
+
+		window.addEventListener('scroll',function(){
+			var header = document.querySelector("header");
+			header.classList.toggle("sticky",100>window.scrollY>20)
+		})
+	</script>
+
+</body>
+</html>

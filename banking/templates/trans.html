@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+<head>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="{% static 'css/main.css' %}">
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+	<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/fontawesome.min.css">
+	<title>Transactions</title>
+</head>
+<body>
+     <header style="background: black;">
+			
+            <a href="#" class="logo"><img src="{% static 'images/log.png' %}" width="70px"></a>
+			<a class="toggle">MENU</a>
+			<ul>
+				
+				<li><a href="/">Home</a></li>
+				<li><a href="/transfer/?a=0">Transfer</a></li>
+				<li><a href="/trans/" class="active">Transaction</a></li>
+				<li><a href="#">About Us</a></li>
+				<li><a href="#">Contact</a></li>
+			</ul>
+	 </header>
+
+     <!--balance-->
+
+     <div class="main-account">
+     	<h1>Transaction History</h1>
+      <div class="account">
+     	<table>
+     		<tr><th>Name</th><th>Account number</th><th>Email</th><th>Mobile</th><th>Balance</th><th>Date Time</th><th></th></tr>
+     		{% for row in data %}
+     		<tr><td>{{row.name}}</td><td>{{row.account}}</td><td>{{row.email}}</td><td>{{row.mobile}}</td><td>{{row.balance}}</td><td>{{row.date}}</td><td><a href="/delete/?del={{row.account}}"><button class="del">Delete</button></a></td></tr>
+     	     {% endfor %}
+     	</table>
+      </div>
+     </div>
+
+
+</body>
+</html>
